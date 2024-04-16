@@ -14,6 +14,8 @@ cc_library_shared {
     shared_libs: [
         "libqdMetaData",
         "libdl",
+        "libgralloctypes",
+        "libhidlbase",
         "android.hardware.graphics.common@1.2",
         "android.hardware.graphics.mapper@2.0",
         "android.hardware.graphics.mapper@2.1",
@@ -38,10 +40,7 @@ cc_library_shared {
 //libgralloccore
 cc_library_shared {
     name: "libgralloccore",
-    defaults: [
-        "qtidisplay_common_defaults",
-        "gralloc_handle_has_reserved_size_defaults",
-    ],
+    defaults: ["qtidisplay_common_defaults"],
     sanitize: {
         integer_overflow: true,
     },
